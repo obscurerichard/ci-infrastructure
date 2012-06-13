@@ -4,3 +4,6 @@
 [submodule "cookbooks/java"]
 	path = cookbooks/java
 	url = https://github.com/opscode-cookbooks/java.git
+[submodule "cookbooks/python"]
+	path = cookbooks/python
+	url = https://github.com/opscode-cookbooks/python.git
