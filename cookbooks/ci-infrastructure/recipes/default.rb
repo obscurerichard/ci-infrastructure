@@ -35,17 +35,6 @@
 
 include_recipe "apt"
 include_recipe "git"
-
-#bash "git-submodules" do
-#  cwd "/vagrant"
-#  user "vagrant"
-#  group "vagrant"
-#  code <<-EOH
-#    git submodule init
-#    git submodule update
-#EOH
-#end
-
 include_recipe "python"
 include_recipe "python::pip"
 include_recipe "python::virtualenv"
