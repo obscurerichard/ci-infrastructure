@@ -31,6 +31,8 @@ directory node[:jenkins][:server][:home] do
   action :create
 end
 
+ebs_vol_dev_mount = node[:jenkins][:server][:ebs_device]
+
 # Adapted from https://github.com/opscode-cookbooks/database/blob/master/recipes/ebs_volume.rb
 execute "mkfs.xfs #{ebs_vol_dev_mount}" do
   only_if "xfs_admin -l #{ebs_vol_dev_mount} 2>&1 | grep -qx 'xfs_admin: #{ebs_vol_dev_mount} is not a valid XFS filesystem (unexpected SB magic number 0x00000000)'"
